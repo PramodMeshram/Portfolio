@@ -1,0 +1,462 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #000, #111); 
+}
+
+.navbar{
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-contents {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+    padding-right: 100px;
+    gap: 60px;
+    margin-right: 100px;
+}
+
+.nav-contents a {
+    font-size: 22px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    position: relative; 
+}
+.nav-contents a:hover{
+     transform: translateY(-2px);
+     color: rgb(157, 0, 255);
+}
+
+.nav-contents a::after {
+    content: ""; 
+    position: absolute;
+    left: 0%;
+    bottom: -4px; 
+    width: 0%;
+    height: 3.2px;
+    background-color: rgb(157, 0, 255); 
+    transition: width 0.4s ease-in-out; 
+}
+
+.nav-contents a:hover::after {
+    width: 100%; 
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-top: 0px;
+    margin-left: 12%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b736ce;
+    border-radius: 3px;
+}
+
+.Highlights {
+    height: auto;
+    background: linear-gradient(to top, rgb(25, 25, 25), rgb(0, 0, 0));
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.Highlights h2 {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding-top: 1.5%;
+    margin-bottom: 15px;
+}
+
+.high {
+    border: 2px solid rgb(0, 128, 255);
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 60px; 
+    flex-wrap: wrap; 
+}
+
+.card {
+    margin-top: 50px;
+    background: linear-gradient(45deg, rgb(255, 0, 76), rgb(4, 92, 225));
+    color: white;
+    height: 435px;
+    width: 330px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0%;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card h4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: -3%;
+
+}
+
+.card h5{
+    font-weight: 400;
+    font-size: 15px;
+    width: 100%;
+    margin-top: -5%;
+}
+
+.card p {
+    font-size: 1rem;
+    width: 100%;
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 128, 255, 0.5), 0px 8px 20px rgba(255, 0, 128, 0.5);
+}
+
+.hamburger {
+    display: none; 
+    flex-direction: column; 
+    cursor: pointer;
+    margin-right: 0; 
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; 
+    }
+}
+
+.container2 {
+    max-width: 100%;
+    margin-bottom: auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    height: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container2 h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.volunteer-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    gap: 30px;
+}
+
+.volunteer-item {
+    padding: 20px;
+    background-color: #cd8da5;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+}
+
+.container2 h2 {
+    font-size: 1.8rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.role {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.organization, .location, .date {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.organization {
+    color: #007bff;
+}
+
+.location, .date {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        padding: 10px;
+    }
+
+    .container2 h1 {
+        font-size: 2rem;
+    }
+
+    .container2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .volunteer-item {
+        padding: 15px;
+    }
+}
+
+.footer-section {
+    background-color: #000000; 
+    color: #ffffff; 
+    text-align: center; 
+    margin-top: 3%;
+    padding: 10px 10px; 
+    font-size: 20px; 
+    font-weight: 300; 
+    border-top: 2px solid #da09ff; 
+    position: relative; 
+    margin-top: 0%;
+}
+
+.footer-section p {
+    margin: 0; 
+    line-height: 4; 
+}
+
+.social-media a {
+    margin: 0 25px; 
+    display: inline-block; 
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media img {
+    width: 30px; 
+    height: 30px; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.social-media img:hover {
+    transform: scale(1.2); 
+    filter: brightness(1.5); 
+}
+
+.card, .Highlights h2, .volunteer-item h2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+
+.card.visible, .Highlights h2.visible, .volunteer-item h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.card:hover{
+    transform: translateY(-10px);
+    transition: transform 0.5s ease-in-out;
+}
+
+@media(max-width: 768px)
+{
+
+    body, html{
+        overflow-x: hidden;
+        background-color: black;
+    }
+
+    .navbar {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 10px 15px; 
+    }
+
+    .logo {
+        font-size: 1.7rem; 
+        margin-left: 0; 
+        width: 30%;
+        text-align: left; 
+    }
+
+    .hamburger {
+        display: flex; 
+        margin-top: 0;
+        margin-right: 13%; 
+    }
+
+    .hamburger span {
+        background-color: #fff; 
+    }
+
+    .nav-contents {
+        display: none; 
+        flex-direction: column; 
+        background-color: black; 
+        position: absolute;
+        top: 100%; 
+        right: 0;
+        width: 100%; 
+        text-align: center;
+    }
+
+    .nav-contents.active {
+        display: flex; 
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 230px;
+        margin: 0;
+        width: 100%;
+        padding-left: 0;
+        margin-top: -10px;
+        padding-bottom: 30px;
+    }
+    
+    .nav-contents > a {
+        font-size: 1rem; 
+        width: 100%; 
+        margin-left: 35%;
+    }
+
+    .nav-contents.active > a{
+        margin: 0;
+        padding: 0;
+        margin-top: -5%;
+        width: 15%;
+        margin-left: 95%;
+        
+    }
+    .Highlights {
+        padding: 100px 20px; 
+      }
+    
+      .Highlights h2 {
+        font-size: 28px; 
+        text-align: center;
+      }
+    
+      .high {
+        width: 90%; 
+        margin: 10px auto; 
+      }
+    
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 10px; 
+      }
+    
+      .card {
+        width: 90%; 
+        max-width: 400px; 
+        padding: 20px;
+        height: auto;
+        box-sizing: border-box;
+        background-color: #2c3e50; 
+        border-radius: 8px; 
+        margin-bottom: 20px; 
+      }
+    
+      .card h3 {
+        font-size: 22px; 
+        margin-bottom: 10px;
+      }
+    
+      .card h4 {
+        font-size: 18px; 
+        margin-bottom: 20px;
+      }
+    
+      .card h5 {
+        font-size: 16px;
+        margin-bottom: 12px;
+        font-weight: 400;
+      }
+    
+      .card p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    
+      .card h3, .card h4, .card h5 {
+        text-align: center;
+      }
+
+      .container2{
+        margin-top: -10%;
+        padding-bottom: 0%;
+      }
+
+      .volunteer-section{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+      }  
+
+      .footer-section .social-media img {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .footer-section p{
+        font-size: 15px;
+      }
+
+}
