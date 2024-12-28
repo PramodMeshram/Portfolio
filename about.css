@@ -282,7 +282,7 @@ body,html{
     height: 80px;
     background: linear-gradient(165deg, rgb(161, 23, 23),rgb(180, 3, 224)); 
     color: #fffa75; 
-    border-radius: 25px; 
+    border-radius: 10px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -389,6 +389,8 @@ body,html{
     }
   }
 
+  
+
   .footer-section {
     background-color: #000000; 
     color: #ffffff; 
@@ -438,6 +440,51 @@ body,html{
   margin: 4px 0;
   transition: 0.3s;
 }
+
+.resume-section {
+   height: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.resume-section h2{
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 4%;
+}
+
+.reshead{
+  width: 30%;
+  margin-top: -1%;
+  border: 1px solid salmon;
+}
+
+.btn {
+    background-color: #000000;
+    border: 3px solid salmon;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+    margin-bottom: 3%;
+  
+}
+
+.btn:hover {
+    background-color: rgb(254, 108, 91);
+}
+
 
 @media (max-width: 768px)
 {
@@ -547,6 +594,44 @@ body,html{
   margin-bottom: 15px;
   width: 100%; 
   height: auto;
+}
+#education h2{
+  padding-top: 10%;
+}
+.edhead{
+  width: 70%;
+  margin-top: -5%;
+}
+
+.ski{
+  width: 60%;
+  margin-top: -5%;
+}
+.resume-section {
+  padding: 20px;
+}
+
+.resume-section h2{
+  font-size: 40px;
+}
+
+.reshead{
+  margin-bottom: 15%;
+  width: 70%;
+  margin-top: -5%;
+}
+
+.resume-buttons {
+  flex-direction: column; 
+  align-items: center;   
+  gap: 20px;           
+}
+
+.btn {
+  width: 70%;         
+  text-align: center;    
+  padding: 12px;         
+  font-size: 16px;       
 }
 .footer-section .social-media img {
   width: 20px;
