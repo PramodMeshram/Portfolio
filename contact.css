@@ -1,0 +1,287 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #000, #111); 
+}
+
+.navbar{
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-contents {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+    padding-right: 100px;
+    gap: 60px;
+    margin-right: 100px;
+}
+
+.nav-contents a {
+    font-size: 22px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    position: relative; 
+}
+.nav-contents a:hover{
+     transform: translateY(-2px);
+     color: rgb(157, 0, 255);
+}
+
+.nav-contents a::after {
+    content: ""; 
+    position: absolute;
+    left: 0%;
+    bottom: -4px; 
+    width: 0%;
+    height: 3.2px;
+    background-color: rgb(157, 0, 255); 
+    transition: width 0.4s ease-in-out; 
+}
+
+.nav-contents a:hover::after {
+    width: 100%; 
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-top: 0px;
+    margin-left: 12%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b736ce;
+    border-radius: 3px;
+}
+
+.content {
+    padding: 110px 20px 160px;
+    height: auto;
+    text-align: center;
+    background: linear-gradient(to bottom, #000, #111);
+    animation: fadeIn 1.2s ease-in-out;
+    margin-top: -28px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-wrapper{
+    padding-top: 3%;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #b036ce;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #a836ce;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info p{
+    margin-bottom: 25px;
+}
+
+
+
+span{
+    color: #fd7affdd;
+    font-weight: 200;
+
+}
+
+.hamburger {
+    display: none; 
+    flex-direction: column; 
+    cursor: pointer;
+    margin-right: 0; 
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.footer-section {
+    background-color: #000000; 
+    color: #ffffff; 
+    text-align: center; 
+    margin-top: 3%;
+    padding: 10px 10px; 
+    font-size: 20px; 
+    font-weight: 300; 
+    border-top: 2px solid #da09ff; 
+    position: relative; 
+    margin-top: 0%;
+}
+
+.footer-section p {
+    margin: 0; 
+    line-height: 4; 
+}
+
+.social-media a {
+    margin: 0 25px; 
+    display: inline-block; 
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media img {
+    width: 30px; 
+    height: 30px; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.social-media img:hover {
+    transform: scale(1.2); 
+    filter: brightness(1.5); 
+}
+
+@media(max-width: 768px)
+{
+
+    body, html{
+        overflow-x: hidden;
+        background-color: black;
+    }
+
+    .navbar {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 10px 15px; 
+    }
+
+    .logo {
+        font-size: 1.7rem; 
+        margin-left: 0; 
+        width: 30%;
+        text-align: left; 
+    }
+
+    .hamburger {
+        display: flex; 
+        margin-top: 0;
+        margin-right: 13%; 
+    }
+
+    .hamburger span {
+        background-color: #fff; 
+    }
+
+    .nav-contents {
+        display: none; 
+        flex-direction: column; 
+        background-color: black; 
+        position: absolute;
+        top: 100%; 
+        right: 0;
+        width: 100%; 
+        text-align: center;
+    }
+
+    .nav-contents.active {
+        display: flex; 
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 230px;
+        margin: 0;
+        width: 100%;
+        padding-left: 0;
+        margin-top: -10px;
+        padding-bottom: 30px;
+    }
+    
+    .nav-contents > a {
+        font-size: 1rem; 
+        width: 100%; 
+        margin-left: 35%;
+    }
+
+    .nav-contents.active > a{
+        margin: 0;
+        padding: 0;
+        margin-top: -5%;
+        width: 15%;
+        margin-left: 95%;
+        
+    }
+
+    .content{
+        padding-top: 40%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content h1{
+        font-size: 40px;
+    }
+
+    .footer-section .social-media img {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .footer-section p{
+        font-size: 15px;
+      }
+}
